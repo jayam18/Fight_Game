@@ -6,8 +6,9 @@ import Creature from '../models/creature';
 const router = module.exports = express.Router();
 
 router.get('/', (req, res) => {
+  console.log('Creatures:');
   Creature.find((err, creatures) => res.send({ creatures })
-  // console.log('Creatures:', creatures);
+
 );
 });
 
